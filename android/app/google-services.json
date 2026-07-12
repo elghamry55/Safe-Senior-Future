@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "646220933249",
+    "firebase_url": "https://safesenior-future-default-rtdb.firebaseio.com",
+    "project_id": "safesenior-future",
+    "storage_bucket": "safesenior-future.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646220933249:android:eca84d35f189045cf00580",
+        "android_client_info": {
+          "package_name": "com.example.graduation_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9mg8b7igmEWRraNf5G2OSHfxMaDVv5NE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
