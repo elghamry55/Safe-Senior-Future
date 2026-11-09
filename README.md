@@ -1,9 +1,18 @@
 # Safe Senior Future
 ### Flutter-Based Elderly Healthcare Monitoring & Family Assistance App
 
-Safe Senior Future is the mobile application component of an integrated elderly-care project. It provides patients and family members with a shared interface for viewing health readings, managing medication schedules, and responding to emergency alerts.
+Safe Senior Future is the mobile application component of an integrated elderly-care project. It provides patients and family members with a shared interface for monitoring health readings, managing medication schedules, and responding to emergency alerts.
 
-**Project focus:** Flutter mobile development, real-time Firebase data, patient/family dashboards, medication reminders, and emergency notifications.
+**Project focus:** Flutter mobile development, Firebase integration, patient and family dashboards, medication reminders, and emergency notifications.
+
+## App Screenshots
+
+<p align="center">
+  <img src="screenshots/screen-01.png" width="24%" alt="Safe Senior Future app screenshot 1" />
+  <img src="screenshots/screen-02.png" width="24%" alt="Safe Senior Future app screenshot 2" />
+  <img src="screenshots/screen-03.png" width="24%" alt="Safe Senior Future app screenshot 3" />
+  <img src="screenshots/screen-04.png" width="24%" alt="Safe Senior Future app screenshot 4" />
+</p>
 
 ## Key Features
 
@@ -34,60 +43,68 @@ Safe Senior Future is the mobile application component of an integrated elderly-
 
 The codebase is organized by feature, with UI, state management, and data access separated into dedicated folders.
 
-    lib/
-    ├── core/
-    │   ├── services/       # Localization and notification services
-    │   ├── theme/           # Theme state and configuration
-    │   └── utils/
-    ├── features/
-    │   ├── auth/            # Patient and family registration flows
-    │   ├── dashboard/       # Patient and family dashboards
-    │   ├── emergency/       # SOS and fall-alert experiences
-    │   ├── medication/      # Medication schedules and reminders
-    │   └── entertainment/   # Quran, books, and audio
-    ├── firebase_options.dart
-    └── main.dart
+```text
+lib/
+├── core/
+│   ├── services/       # Localization and notification services
+│   ├── theme/           # Theme state and configuration
+│   └── utils/
+├── features/
+│   ├── auth/            # Patient and family registration flows
+│   ├── dashboard/       # Patient and family dashboards
+│   ├── emergency/       # SOS and fall-alert experiences
+│   ├── medication/      # Medication schedules and reminders
+│   └── entertainment/   # Quran, books, and audio
+├── firebase_options.dart
+└── main.dart
+```
 
 ## Firebase Data Integration
 
 The Flutter app currently reads and writes the following data paths:
 
-- Realtime Database: CurrentVitals for live readings and VitalsHistory for vital history.
-- Cloud Firestore: patients, alerts, fall_alerts, and patient medication subcollections.
-- Firebase Cloud Messaging: receives background messages and displays emergency notifications.
+- **Realtime Database:** `CurrentVitals` for live readings and `VitalsHistory` for vital history.
+- **Cloud Firestore:** `patients`, `alerts`, `fall_alerts`, and patient medication subcollections.
+- **Firebase Cloud Messaging:** Receives background messages and displays emergency notifications.
 
-The live-vitals data is expected to include fields such as heartRate, SPO2, and temperature (or temp). Fall-alert records are consumed from the fall_alerts collection.
+The live-vitals data is expected to include fields such as `heartRate`, `SPO2`, and `temperature` (or `temp`). Fall-alert records are consumed from the `fall_alerts` collection.
 
 ## Getting Started
 
 ### Requirements
 
-- Flutter SDK compatible with the Dart constraint in pubspec.yaml (Dart SDK ^3.11.0).
+- Flutter SDK compatible with the Dart constraint in `pubspec.yaml` (Dart SDK `^3.11.0`).
 - Android Studio or another Flutter-supported development environment.
 - A Firebase project configured for the platforms you intend to run.
 
 ### Run locally
 
 1. Clone this repository:
-   
-       git clone https://github.com/elghamry55/Safe-Senior-Future.git
-       cd Safe-Senior-Future
+
+   ```bash
+   git clone https://github.com/elghamry55/Safe-Senior-Future.git
+   cd Safe-Senior-Future
+   ```
 
 2. Install dependencies:
 
-       flutter pub get
+   ```bash
+   flutter pub get
+   ```
 
-3. Verify that lib/firebase_options.dart matches your own Firebase project configuration. If needed, regenerate the configuration with the FlutterFire CLI.
+3. Verify that `lib/firebase_options.dart` matches your own Firebase project configuration. If needed, regenerate the configuration with the FlutterFire CLI.
 4. Configure the required Firebase services and secure Firestore/Realtime Database rules for your environment.
 5. Run the app:
 
-       flutter run
+   ```bash
+   flutter run
+   ```
 
 ## Important Notes
 
-- This repository documents the **Flutter application**. Hardware firmware, sensor setup, and any external fall-detection model or processing service must be configured separately if they are part of your complete system.
+- This repository documents the **Flutter application**. Hardware firmware, sensor setup, and any external fall-detection model or processing service must be configured separately if they are part of the complete system.
 - Firebase client configuration is not a substitute for database security rules. Review and configure access rules before deploying or using real patient data.
-- The app is an academic/demo project and is not a certified medical device. Health readings and alerts should not replace professional medical assessment.
+- This is an academic/demo project and is not a certified medical device. Health readings and alerts should not replace professional medical assessment.
 
 ## My Contribution
 
