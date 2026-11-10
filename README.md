@@ -5,15 +5,6 @@ Safe Senior Future is the mobile application component of an integrated elderly-
 
 **Project focus:** Flutter mobile development, Firebase integration, patient and family dashboards, medication reminders, and emergency notifications.
 
-## App Screenshots
-
-<p align="center">
-  <img src="screenshots/screen-01.png" width="24%" alt="Safe Senior Future app screenshot 1" />
-  <img src="screenshots/screen-02.png" width="24%" alt="Safe Senior Future app screenshot 2" />
-  <img src="screenshots/screen-03.png" width="24%" alt="Safe Senior Future app screenshot 3" />
-  <img src="screenshots/screen-04.png" width="24%" alt="Safe Senior Future app screenshot 4" />
-</p>
-
 ## Key Features
 
 - **Patient and family experiences:** Separate patient and family flows. Family members can link to a patient using a patient ID.
